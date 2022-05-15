@@ -64,6 +64,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnOpenviewPager.setOnClickListener {
+            Intent(this, ViewPagerActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
