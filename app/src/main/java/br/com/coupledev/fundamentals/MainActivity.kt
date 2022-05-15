@@ -1,21 +1,29 @@
 package br.com.coupledev.fundamentals
 
 import android.content.Intent
+import android.content.IntentFilter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import br.com.coupledev.fundamentals.databinding.ActivityMainBinding
+import br.com.coupledev.fundamentals.receivers.AirplaneModeChangedReceiver
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var receiver: AirplaneModeChangedReceiver
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        receiver = AirplaneModeChangedReceiver()
+        IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED).also {
+            registerReceiver(receiver, it)
+        }
 
         binding.btnOpenPermissions.setOnClickListener {
             Intent(this, PermissionsActivity::class.java).also {
@@ -94,11 +102,28 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnOpenIntenService.setOnClickListener {
+            Intent(this, IntentServiceActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.btnOpenDragAndDrop.setOnClickListener {
+            Intent(this, DragAndDropActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.app_bar_menu, menu)
         return true
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unregisterReceiver(receiver)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
