@@ -8,6 +8,27 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/btnOpenNavDrawer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Navigation Drawer"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenTabLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnOpenTabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Tab Layout"
+        app:layout_constraintBottom_toTopOf="@+id/btnOpenFragments"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/btnOpenFragments"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -2,6 +2,8 @@
     <string name="app_name">Fundamentals</string>
     <string name="hey_guys_what_s_up">Hey guys what\'s up</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string-array name="months">
         <item>January</item>

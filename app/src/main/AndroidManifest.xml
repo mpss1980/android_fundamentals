@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fundamentals">
         <activity
+            android:name=".NavigationDrawerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TabLayoutActivity"
+            android:exported="false" />
+        <activity
             android:name=".ViewPagerActivity"
             android:exported="false" />
         <activity
@@ -50,13 +56,13 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28"
         tools:ignore="ManifestOrder" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
 </manifest>

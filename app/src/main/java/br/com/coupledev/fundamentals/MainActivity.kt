@@ -70,6 +70,18 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnOpenTabLayout.setOnClickListener {
+            Intent(this, TabLayoutActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.btnOpenNavDrawer.setOnClickListener {
+            Intent(this, NavigationDrawerActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
