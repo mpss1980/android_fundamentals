@@ -1,130 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnOpenNavDrawer"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Navigation Drawer"
-        app:layout_constraintBottom_toTopOf="@+id/btnOpenTabLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenTabLayout"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnOpenTabLayout"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Tab Layout" />
+
+        <Button
+            android:id="@+id/btnOpenDialogs"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:text="Dialogs"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Tab Layout"
-        app:layout_constraintBottom_toTopOf="@+id/btnOpenFragments"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenFragments"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnOpenDataIntent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Data Intent" />
+
+        <Button
+            android:id="@+id/btnOpenFragments"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Fragments"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Fragments"
-        app:layout_constraintBottom_toTopOf="@+id/btnOpenSpinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenPermissions"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnOpenNavDrawer"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Navigation Drawer" />
+
+        <Button
+            android:id="@+id/btnOpenSpinner"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Spinner" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Permissions"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenDataIntent"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnOpenImplicitsIntents"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Implicit Intents" />
+
+        <Button
+            android:id="@+id/btnOpenBottomNavigation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Bottom Navigation" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Data Intent"
-        app:layout_constraintBottom_toTopOf="@+id/btnOpenPermissions"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenImplicitsIntents"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnOpenRecyclerView"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="Recycler View"/>
+
+        <Button
+            android:id="@+id/btnOpenviewPager"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="View Pager"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Implicit Intents"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenPermissions" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenDialogs"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/btnOpenSharedPrefs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Shared Preferences" />
+
+        <Button
+            android:id="@+id/btnOpenPermissions"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Permissions" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Dialogs"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenImplicitsIntents" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btnOpenSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Spinner"
-        app:layout_constraintBottom_toTopOf="@+id/btnOpenDataIntent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/btnNotification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Notification" />
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnOpenRecyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Recycler View"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenDialogs" />
-
-    <Button
-        android:id="@+id/btnOpenBottomNavigation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Bottom Navigation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenRecyclerView" />
-
-    <Button
-        android:id="@+id/btnOpenviewPager"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="View Pager"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnOpenBottomNavigation" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

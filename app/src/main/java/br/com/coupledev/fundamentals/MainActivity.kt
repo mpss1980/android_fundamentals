@@ -82,6 +82,18 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnOpenSharedPrefs.setOnClickListener {
+            Intent(this, SharedPrefsActivity::class.java).also {
+                startActivity(it)
+            }
+        }
+
+        binding.btnNotification.setOnClickListener {
+            Intent(this, ShowNotificationActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
