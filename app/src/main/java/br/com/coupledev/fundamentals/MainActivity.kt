@@ -58,6 +58,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnOpenBottomNavigation.setOnClickListener {
+            Intent(this, BottomNavigationActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
