@@ -3,6 +3,7 @@ package br.com.coupledev.fundamentals
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import br.com.coupledev.fundamentals.data.Person
 import br.com.coupledev.fundamentals.databinding.ActivityDataIntentBinding
 
 class DataIntentActivity : AppCompatActivity() {

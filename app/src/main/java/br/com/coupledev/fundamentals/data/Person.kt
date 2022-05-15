@@ -1,4 +1,4 @@
-package br.com.coupledev.fundamentals
+package br.com.coupledev.fundamentals.data
 
 import java.io.Serializable
 

@@ -46,6 +46,12 @@ class MainActivity : AppCompatActivity() {
                 startActivity(it)
             }
         }
+
+        binding.btnOpenRecyclerView.setOnClickListener {
+            Intent(this, RecycleViewActivity::class.java).also {
+                startActivity(it)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
